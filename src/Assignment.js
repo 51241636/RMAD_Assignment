@@ -1,10 +1,10 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, StatusBar} from 'react-native';
 
-// const Assignment = () => {
-//   React.useEffect(() => {
-//     functionOne();
-//   }, []);
+const Assignment = () => {
+  React.useEffect(() => {
+    functionOne();
+  }, []);
 
   const functionOne = () => {
     const marks =75;

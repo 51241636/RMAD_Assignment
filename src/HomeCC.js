@@ -31,17 +31,17 @@
 
 // export default HomeCC ;
 
-import React from "react";
+// import React from "react";
 
-import { } from "react-native";
+// import { } from "react-native";
 
 
-const name='apple';
-if (name==='orange'){
-    console.log('fruit',true);
+// const name='apple';
+// if (name==='orange'){
+//     console.log('fruit',true);
 
-}else{
-    console.log('fruit',false);
-}
-//const marks =80
-export default HomeCC;
+// }else{
+//     console.log('fruit',false);
+// }
+// //const marks =80
+// export default HomeCC;
