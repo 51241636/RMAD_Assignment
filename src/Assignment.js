@@ -7,12 +7,12 @@ const Assignment = () => {
   }, []);
 
   const functionOne = () => {
-    const marks =75;
+    const marks =80;
     if(marks >=75){
         console.log("your result is A");
-    }elseif(marks= 65 - 75);{
+    }elseif(marks>= 65 );{
         console.log("your result is B")
-    }elseif(marks= 55 - 65 );{
+    }elseif(marks>=55 );{
         console.log("your result is C");
     }else{
         console.log("you fail the Exam");
