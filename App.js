@@ -6,13 +6,13 @@
  * @flow strict-local
  */
 
- import React, {Component} from 'react';
-import {Text} from 'react-native';
+//  import React, {Component} from 'react';
+// import {Text} from 'react-native';
 
-class Cat extends Component {
-  render() {
-    return <Text>Hello, I am your cat!</Text>;
-  }
-}
+// class Cat extends Component {
+//   render() {
+//     return <Text>Hello, I am your cat!</Text>;
+//   }
+// }
 
-export default Cat;
+// export default Cat;

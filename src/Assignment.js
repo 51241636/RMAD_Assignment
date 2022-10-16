@@ -7,18 +7,15 @@ const Assignment = () => {
   }, []);
 
   const functionOne = () => {
-    const marks =80;
-    if(marks >=75){
-        console.log("your result is A");
-    }elseif(marks>= 65 );{
-        console.log("your result is B")
-    }elseif(marks>=55 );{
-        console.log("your result is C");
-    }else{
-        console.log("you fail the Exam");
+    const name = 'Apple';
+    // If CONDITIONS
+    if (name === 'BlueBerry') {
+      console.log('Fruit 1', name);
+    } else if (name === 'Orange') {
+      console.log('Fruit 2', name);
+    } else {
+      console.log('Fruit 3', 'Not Available');
     }
-
-    
 
     //Ternary Operator
     // name === 'Orange'
@@ -36,20 +33,26 @@ const Assignment = () => {
     //     break;
     // }
 
-    // const marks = 75;
-    // 75 -> A
-    // 65 - 75 -> B
-    // 55 - 65 -> C
-    // 35 - 55 -> s
-    // 35 - W
+    const marks = 90;
+    if (marks >= 75) {
+      console.log('your result is A');
+    } else if (marks >= 65) {
+      console.log('your result is B');
+    } else if (marks >= 55) {
+      console.log('your result is c');
+    } else if (marks >= 35) {
+      console.log('your result is S');
+    } else {
+      console.log('you fail the exam');
+    }
   };
 
-//   return (
-//     <SafeAreaView style={styles.container}>
-//       <Text style={styles.title}>Lesson 01</Text>
-//     </SafeAreaView>
-//   );
-// };
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>RMAD project</Text>
+    </SafeAreaView>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
