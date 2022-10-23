@@ -1,18 +1,30 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+// In App.js in a new project
 
-//  import React, {Component} from 'react';
-// import {Text} from 'react-native';
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Lesson2 from './src/Lesson2';
+import { NavigationRouts } from './src/enum';
 
-// class Cat extends Component {
-//   render() {
-//     return <Text>Hello, I am your cat!</Text>;
-//   }
-// }
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+    </View>
+  );
+}
 
-// export default Cat;
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer >
+      <Stack.Navigator>
+        <Stack.Screen name={NavigationRouts.LESSON_01} component={Lesson2} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;

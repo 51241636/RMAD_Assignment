@@ -32,12 +32,12 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => (
   </TouchableOpacity>
 );
 
-const lesson2 = () => {
+const Lesson2 = () => {
   const [selectedId, setSelectedId] = useState(null);
   // const onPressfruititem
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "red" : "white";
+    const backgroundColor = item.id === selectedId ? "red" : "yellow";
     const color = item.id === selectedId ? 'white' : 'black';
 
     return (
@@ -78,4 +78,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default lesson2;
+export default Lesson2;
