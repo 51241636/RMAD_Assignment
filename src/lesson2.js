@@ -1,65 +1,62 @@
-import React from 'react';
-import {
-  SafeAreaView,
-  FlatList,
-  StyleSheet,
-  Text,
-  StatusBar,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import React, { useState } from "react";
+import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const DATA = [
   {
-    id: 1,
-    title: 'Banana',
+    id: "a",
+    title: "Pasindu",
   },
   {
-    id: 2,
-    title: 'Apple',
+    id: "b",
+    title: "kamal",
   },
   {
-    id: 3,
-    title: 'Orange',
+    id: "c",
+    title: "Amara",
   },
   {
-    id: 4,
-    title: 'Pine Apple',
+    id: "d",
+    title: "Udaya",
+   
   },
 ];
 
+
+
+
+const Item = ({ item, onPress, backgroundColor, textColor }) => (
+  <TouchableOpacity onPress={onPress} style={[styles.item, backgroundColor]}>
+    <Text style={[styles.title, textColor]}>{item.title}</Text>
+    <Text style={[styles.id, textColor]}>{item.id}</Text>
+    <View style ={{padding: 10}}/>
+  </TouchableOpacity>
+);
+
 const lesson2 = () => {
-  const [listData, setListData] = React.useState(DATA);
-  const [selectedItem, setSelectedItem] = React.useState(null);
+  const [selectedId, setSelectedId] = useState(null);
+  // const onPressfruititem
 
-  const onPressFruitItem = item => {
-    // setSelectedItem(item);
+  const renderItem = ({ item }) => {
+    const backgroundColor = item.id === selectedId ? "red" : "white";
+    const color = item.id === selectedId ? 'white' : 'black';
 
-    let newArray = listData.filter(fruit => fruit !== item);
-    setListData(newArray);
+    return (
+      <Item
+        item={item}
+        onPress={() => setSelectedId(item.id)}
+        backgroundColor={{ backgroundColor }}
+        textColor={{ color }}
+      />
+    );
   };
-
-  const FruitItem = ({item}) => (
-    <TouchableOpacity
-      style={[
-        styles.box,
-        selectedItem === item
-          ? {backgroundColor: 'red'}
-          : {backgroundColor: 'white'},
-      ]}
-      onPress={() => onPressFruitItem(item)}>
-      <Text style={styles.title}>{item.id}</Text>
-      <View style={{padding: 10}} />
-      <Text style={styles.title}>{item.title}</Text>
-    </TouchableOpacity>
-  );
 
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
-        data={listData}
-        renderItem={({item}) => <FruitItem item={item} />}
-        keyExtractor={item => item.id}
+        data={DATA}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+        extraData={selectedId}
       />
     </SafeAreaView>
   );
@@ -70,24 +67,11 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
   },
-  box: {
-    flexDirection: 'row',
-    backgroundColor: 'green',
+  item: {
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
-
-    // ==================
-
-    elevation: 9, // for android
-
-    //for ios
-    shadowColor: 'black',
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 0.5,
-    shadowRadius: 3,
-    borderRadius: 8,
-    //
+    flexDirection:"column-reverse",
   },
   title: {
     fontSize: 32,
