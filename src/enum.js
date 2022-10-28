@@ -1,4 +1,6 @@
-export const NavigationRouts = {
-    LESSON_01: 'LESSON_01',
-    LESSON_02: 'LESSON_02',
-  };
+export const Navigations={
+Assignment:'Assignment',
+Lesson2:'Lesson2'
+
+
+}
