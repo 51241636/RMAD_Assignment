@@ -1,5 +1,5 @@
 export const Navigations={
-Assignment:'Assignment',
+Text1:'Text1',
 Lesson2:'Lesson2'
 
 

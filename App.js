@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Lesson2 from './src/Lesson2';
 import Assignment from './src/Assignment';
 import { Navigations } from './src/enum';
+import Text1 from './src/Text1';
 
 function HomeScreen() {
   return (
@@ -23,10 +24,10 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={Navigations.Assignment}>
-        <Stack.Screen name={Navigations.Assignment} 
-        component={Lesson2} 
-      //  options={{headerShown: false}}
+      <Stack.Navigator initialRouteName={Navigations.Text1}>
+        <Stack.Screen name={Navigations.Text1} 
+        component={Text1} 
+       options={{headerShown: false}}
         />
         
         <Stack.Screen name={Navigations.Lesson2} 
